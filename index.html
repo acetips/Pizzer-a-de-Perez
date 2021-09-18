@@ -16,7 +16,6 @@
             <div class="row">
                 <div class="col-md-3"></div>
                 <div class="col-md-6">
-                    <div class="jumbotron">
                         <form id="orderdetails">
                             <h3>Enter your name:</h3>
                             <div class="form-group">
@@ -27,7 +26,7 @@
                             <div class="form-group">
                                 <label for="flavor"></label>
                                 <select class="form-control" id="flavor" required>
-                                    <option>Select:</option>
+                                    <option>Select..</option>
                                     <option>Cheese</option>
                                     <option>Veggie</option>
                                     <option>Pepperoni</option>
@@ -42,6 +41,7 @@
                             <div>
                                 <label for="size"></label>
                                 <select class="form-control" id="size" required>
+                                    <option>Select..</option>
                                     <option>Small</option>
                                     <option>Regular</option>
                                     <option>Large</option>
@@ -52,14 +52,56 @@
                             <div>
                                 <label for="crust"></label>
                                 <select class="form-control" id="crust" required>
+                                    <option>Select..</option>
                                     <option>Crispy</option>
                                     <option>Cheese-Stuffed</option>
                                     <option>Glutten-free</option>
                                     <option>Flatbread</option>
                                 </select>
                             </div>
+                            <div class="form-group">
+                                <label for="toppings">Extra toppings:</label>
+                            </div>
+                            <div class="row">
+                                <!-- <div class="col-md-1"></div> -->
+                                <div class="col-md-6" id="col6">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="toppings"
+                                            value="Extra cheese" id="extracheese">
+                                        <label class="form-check-label" for="Extra cheese">Extra Cheese</label>
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="toppings"
+                                            value="Olives" id="olives">
+                                        <label class="form-check-label" for="olives">Olives</label>
+
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="toppings" value="Ham"
+                                            id="ham">
+                                        <label class="form-check-label" for="ham">Ham</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="toppings"
+                                            value="Bacon" id="bacon">
+                                        <label class="form-check-label" for="onions">Bacon</label>
+
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="toppings"
+                                            value="Mushrooms" id="mushrooms">
+                                        <label class="form-check-label" for="mushrooms">Mushrooms</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" id="col6">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" name="toppings"
+                                            value="Onions" id="onions">
+                                        <label class="form-check-label" for="onions">Onions</label>
+                                    </div>
                         </form>
-                    </div>
                 </div>
             </div>
         </div>
