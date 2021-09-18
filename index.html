@@ -18,14 +18,16 @@
                 <div class="col-md-6">
                     <div class="jumbotron">
                         <form id="orderdetails">
+                            <h3>Enter your name:</h3>
                             <div class="form-group">
-                                <label for="name">Name...</label>
-                                <input type="text" class="form-control" id="name" placeholder="Name..." required>
+                                <label for="name"></label>
+                                <input type="text" class="form-control" id="name" placeholder="eg Emelda Perez" required>
                             </div>
-                            <h3>Select a flavor:</h3>
+                            <h3>Which flavor would you like?</h3>
                             <div class="form-group">
-                                <label for="flavor">Available flavors</label>
+                                <label for="flavor"></label>
                                 <select class="form-control" id="flavor" required>
+                                    <option>Select:</option>
                                     <option>Cheese</option>
                                     <option>Veggie</option>
                                     <option>Pepperoni</option>
@@ -34,6 +36,16 @@
                                     <option>BBQ Chicken</option>
                                     <option>Hawaiian</option>
                                     <option>Buffalo</option>
+                                </select>
+                            </div>
+                            <h3>Pizza Crust:</h3>
+                            <div>
+                                <label for="crust"></label>
+                                <select class="form-control" id="crust" required>
+                                    <option>Crispy</option>
+                                    <option>Cheese-Stuffed</option>
+                                    <option>Glutten-free</option>
+                                    <option>Flatbread</option>
                                 </select>
                             </div>
                         </form>
