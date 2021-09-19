@@ -62,5 +62,5 @@ function orderPizza(){
         disabled:true
     });
     //function to deactivate button to avoid multiple orders
-    
+    $('placeholder').prop('disabled',true);
 }
