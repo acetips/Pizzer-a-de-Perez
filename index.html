@@ -42,9 +42,8 @@
                             </div>
                             <h3>Pizza Size:</h3>
                             <div>
-                                <label for="size"></label>
-                                <select class="form-control" id="size" required>
-                                    <option>Select..</option>
+                                <label for="pizzasize"></label>
+                                <select class="form-control" id="pizzasize" required>
                                     <option>Small</option>
                                     <option>Regular</option>
                                     <option>Large</option>
@@ -107,9 +106,21 @@
                                 <br>
                                 <div class="form-group">
                                     <label for="PizzaNo">How many Pizzas would you like?</label>
-                                    <input type="number" id="amount" name="amount" placeholder="Amount.." min="1">
+                                    <input type="number" id="amount" name="amount" placeholder="Amount" min="1">
+                                </div>
+                                <p class="please">Please select your prefered option:</p>
+                                <div class="pod">
+                                    <div>
+                                        <label for="delivery">Delivery</label>
+                                        <input id="d" Delivery="delivery" type="checkbox">
+                                    </div>
+                                    <div>
+                                        <label for="pickup">PickUp</label>
+                                        <input id="p" PickUp="PickUp" type="checkbox">
+                                    </div> 
                                 </div>
                             </div>
+                            <a href="#makeanorder">Add Order</a>
                             <button type="submit" name="submit" class="btn submit btn-success" id="placeorder"><i
                                 class="fas fa-pizza-slice"></i>Place Order<i class="fas fa-spinner fa-spin"></i></button>
                         </form>
@@ -130,17 +141,17 @@
                         <thead>
                             <tr>
                                 <th scope="col">Flavor</th>
-                                <th scope="col">Size</th>
+                                <th scope="col">Pizza Size</th>
                                 <th scope="col">Crust</th>
                                 <th scope="col">Amount</th>
                                 <th scope="col">Extra toppings</th>
-                                <th scope="col">Total Amount</th>
+                                <th scope="col">Pizza Price</th>
                             </tr>
                         </thead>
                         <tbody id="finalOrder">
                             <tr>
                                 <td class="flavor"></td>
-                                <td class="size"></td>
+                                <td class="pizzasize"></td>
                                 <td class="crust"></td>
                                 <td class="amount"></td>
                                 <td class="toppings"></td>
@@ -158,97 +169,6 @@
                             </tr>
                         </tfoot>
                     </table>
-                    <a href="#makeanorder">Add Order</a>
-                    <button type="submit" name="checkout" onclick="delivery()" class="btn submit btn-success"
-                        id="checkout">Checkout</button>
-                </div>
-                <div class="col-md-2"></div>
-            </div>
-        </div>
-    </section>
-    <br> </br>
-    <div id="pnd">
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                    <div id="pickUpDelivery">
-                        <i class="fas fa-clock" style="font-size:80px;color:black;"></i>
-                        <br>
-                        <br>
-                        <p>Your order is being processed.</p>
-                        <p>Choose between:</p>
-                        <button type="submit" name="pickup" onclick="pickUp()" class="btn btn-warning"><i
-                                class="fas fa-store"></i>
-                            Pick Up</button> <br> <br>
-                        <button type="submit" name="delivery" onclick="delivery()" class="btn btn-warning"><i
-                                class="fas fa-truck"></i>Delivery</button>
-                    </div>
-                    <div class="col-md-4"></div>
-                </div>
-            </div>
-        </div>
-        <div id="location">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <div class="">
-                        <form id="deliveryAddress">
-                            <h5>Where should we deliver to?</h5>
-                            <div class="form-group">
-                                <div class="form-group">
-                                    <label for="address">Delivery address</label>
-                                    <input type="" class="form-control" id="address" placeholder="Estate.."
-                                        required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="phone">Enter your phone Number:</label>
-                                <input type="tel" id="phone" name="phone" placeholder="+254 700000000" required>
-                            </div>
-                            <button type="submit" class="btn submit btn-secondary" id="delivery-details"
-                                onclick="deliveryConfirm()">Confirm</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-md-4"></div>
-            </div>
-        </div>
-        <div id="pickUp">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <i class="fas fa-check-circle" style="font-size:80px;color:grey;"></i>
-                    <br>
-                    <br>
-                    <p>
-                    <div class="name"></div>, your order is confirmed!<br><br>Amount due is Ksh.<div class="amountPickUp"></div>.</p>
-                    <a href="#home" type="button" class="btn btn-danger" onclick="backToTop()" id="ok">Okay</a>
-                    
-                </div>
-                <div class="col-md-4"></div>
-            </div>
-        </div>
-        <div id="delivery">
-            <div class="row">
-                <div class="col-md-4"></div>
-                <div class="col-md-4">
-                    <i class="fas fa-car-alt" style="font-size:80px;color:grey;"></i>
-                    <br>
-                    <br>
-                    <p>
-                    <div class="name"></div>, your order is being processed!
-                    <br>
-                    <br>Delivery fee to your location is Ksh.250.
-                    <br>
-                    <br>Amount payable on delivery is Ksh.
-                    <div class="deliveryTotal"></div>.
-                    <br>
-                    <div class="phone"></div>.</p>
-                    <a href="#header" type="button" class="btn btn-danger" onclick="reloadPage()" id="ok">Okay</a>
-                </div>
-                <div class="col-md-4"></div>
-            </div>
-        </div>
-    
+                    njdnklv
 </body>
 </html>

@@ -3,7 +3,7 @@
 function orderPizza(){
     var name=$("input#name").val();
     var flavor=$("#flavor").val();
-    var size=$("size").val();
+    var size=$("#pizzasize").val();
     var amount=$("#amount").val();
     var crust=$("#crust").val();
     var toppings=[];
@@ -12,26 +12,26 @@ function orderPizza(){
         function(){
             toppings.push($(this).val());
         })
-    
-    var flavorPrice;
+        
+    var sizePrice;
     if(flavor==="Cheese"||flavor==="Veggie"||flavor==="Pepperoni"||flavor==="Meat"||flavor==="Margherita"||flavor==="BBQ Chicken"||flavor==="Hawaiian"||flavor==="Buffalo"){
         if(size==="Small"){
-            flavorPrice=500;
+            sizePrice=500;
         }
         else if (size==="Regular"){
-            flavorPrice=800;
+            sizePrice=800;
         }
         else if (size==="Large"){
-            flavorPrice=1500;
+            sizePrice=1500;
         }
         else if (size==="Mega"){
-            flavorPrice=2000;
+            sizePrice=2000;
         }
     }
 
     var crustPrice;
     if (crust==="Crispy"){
-        crustPrice===50;
+        crustPrice=50;
     }
     else if (crust==="Cheese-Stuffed"){
         crustPrice=100;
@@ -66,11 +66,11 @@ function orderPizza(){
     //Total price function
     $("#orderfeedback").show();
 
-    var price=(flavorPrice+crustPrice+toppingPrice);
+    var price=(sizePrice+crustPrice);
     var totalAmount=parseInt(price*amount);
 
     $(".feedback").text("Hello "+name+". Here are your order details:");
-    $(".size").append('<tr><td id="size">' + size);
+    $(".pizzasize").append('<tr><td id="pizzasize">' + size);
     $(".amount").append('<tr><td id="amount">' + amount);
     $(".crust").append('<tr><td id="crust">' + crust);
     $(".flavor").append('<tr><td id="flavor">' + flavor);
@@ -84,8 +84,19 @@ function orderPizza(){
         $(".toppings").append('<tr><td id="toppings">' + toppings);
         $(".name").text(name);
     }
+    var delivery=200;
+    var pickUp=0;
+    var totalOnDelivery= totalAmount+delivery;
+
+    if(document.getElementById("d").checked == true && document.getElementById("p").checked == false){
+        prompt("Where are you located?");
+        alert("Total amount payable on delivery is " + totalOnDelivery);
+    } else if (document.getElementById("d").checked == false && document.getElementById("p").checked == true){
+        alert("Total amount payable on pick up is " + totalAmount);
+    }
+    
 }
-//Function for delivery
+
 function orderDelivery(){
     $("#delivery").show();
     
@@ -97,6 +108,7 @@ function orderDelivery(){
     $("#location").hide();
 }
 //User Interface Logic
+
 $(document).ready(function () {
     $("#orderdetails").submit(function (event) {
         event.preventDefault();
@@ -127,6 +139,7 @@ function deliveryOptions() {
     var checkoutAmountTotal = checkoutAmount + 200;
 
     $(".deliveryTotal").text(checkoutAmountTotal);
+    
 }
 function pickUpOptions() {
     $("#pickUp").show();
@@ -157,4 +170,4 @@ function anotherOrder() {
     $("input[type='checkbox']").prop({
         checked: false
     });
-} 
+}
