@@ -121,8 +121,34 @@ nav li a{
     background-color: orange;
     color: #000;
 }
-
-
+#menu h1{
+    margin-top: -600px;
+    font-size: 5rem;
+    font-family: 'lemonada',sans-serif;
+    font-weight: bolder;
+    text-shadow: .1rem .1rem .3rem;
+    color: yellow;
+    text-align: center;
+}
+.dishes{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    padding: 100px;
+   
+    padding-left: 50px;
+    padding-top: 20px;
+}
+.pizzas{
+    color: white;
+    font-size: xx-large;
+}
+.crusts{
+    color: white;
+    font-size: xx-large;
+    padding-right: 80px;
+}
 @media(max-width:768px){
     #header nav{
         position: fixed;
