@@ -23,7 +23,7 @@ This project entails website for Pizzería de Pérez, a pizza restaurant, throug
 | Place order|     |Pizza price displayed on the table.|
 
 ## Support and contact details
-For any verification or support please contact me through [emeldaperez9@gmail.com]
+For any verification or support please contact me through [emelda.perez@students.moringaschool.com]
 
 ### License
 MIT License
