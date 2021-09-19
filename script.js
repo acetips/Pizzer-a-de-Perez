@@ -42,4 +42,7 @@ function orderPizza(){
     else if (crust==="Flatbread"){
         crustPrice=200;
     }
+
+    var toppingCheckbox=$('input[name="toppings"]:checked').length;
+    
 }
