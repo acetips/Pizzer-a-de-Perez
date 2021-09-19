@@ -49,8 +49,79 @@ nav li a{
 }
 #home{
     background: linear-gradient(0deg, darkgrey, black);
-    min-height: 100vh;
+    position: relative;
+    background-image: url("images/homground.jpg_fit=scale");
 }
+
+.homecontent h1{
+    font-size: 5rem;
+    font-family: 'lemonada',sans-serif;
+    font-weight: bolder;
+    text-shadow: .1rem .1rem .3rem;
+    color: yellow;
+}
+.homecontent{
+    padding-top: 200px;
+}
+.homecontent h2{
+    color: orange;
+    padding-bottom: 40px;
+}
+.homecontent p{
+    font-size: 2rem;
+    color: whitesmoke;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 40%;
+    background-repeat: no-repeat;
+}
+.video-container{
+    position: relative;
+    top: 0; left: 0;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    padding-top: 30px;
+}
+.homecontent a{
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 60px;
+    background-color: orange;
+    color: #000;
+}
+#aboutus{
+    text-align: center;
+    padding-top: 100px;
+}
+#aboutus h1{
+    font-size: 5rem;
+    font-family: 'lemonada',sans-serif;
+    font-weight: bolder;
+    text-shadow: .1rem .1rem .3rem;
+    color: black;
+    padding-bottom: 30px;
+}
+#aboutus h2{
+    color: orange;
+    padding-bottom: 40px;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+#aboutus p{
+    font-size: 20px;
+    font-family: fantasy;
+    width: 80%;
+    padding-left: 180px;
+}
+#aboutus a{
+    padding: 20px;
+    font-size: 30px;
+    border-radius: 60px;
+    background-color: orange;
+    color: #000;
+}
+
 
 @media(max-width:768px){
     #header nav{
@@ -58,7 +129,8 @@ nav li a{
         top: 0; left: 0;
         height: 100vh;
         width: 35rem;
-        background: black;  
+        background: black;
+        ;  
     }
     #header ul{
         flex-flow: column;
@@ -71,7 +143,7 @@ nav li a{
         border-radius: 5rem;
     }
     #header a:hover{
-        padding: 1rem 5rem;
+        padding-top: 1rem 5rem;
         color: black;
         background: yellow;
         border-radius: 4rem;
