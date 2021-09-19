@@ -57,4 +57,10 @@ function orderPizza(){
     else if (size==="Mega"){
         toppingPrice=toppingCheckbox*300;
     }
+    //unchecked boxes function
+    $("input[type='checkbox']:not(:checked)").prop({
+        disabled:true
+    });
+    //function to deactivate button to avoid multiple orders
+    
 }
