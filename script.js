@@ -64,7 +64,15 @@ function orderPizza(){
     //function to deactivate button to avoid multiple orders
     $('placeholder').prop('disabled',true);
     //Total price function
-    //$("#your")
+    $("#orderdetails").show();
+
     var price=(flavorPrice+crustPrice+toppingPrice);
     var totalAmount=parseInt(price*amount);
+
+    $(".feedback").text("Hello "+name+". Here are your order details:");
+    $(".size").append('<tr><td id="size">' + size);
+    $(".amount").append('<tr><td id="amount">' + amount);
+    $(".crust").append('<tr><td id="crust">' + crust);
+    $(".flavor").append('<tr><td id="flavor">' + flavor);
+    $(".price1").append('<tr><td id="price1">' + totalAmount);
 }
