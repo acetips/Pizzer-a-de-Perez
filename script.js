@@ -75,4 +75,30 @@ function orderPizza(){
     $(".crust").append('<tr><td id="crust">' + crust);
     $(".flavor").append('<tr><td id="flavor">' + flavor);
     $(".price1").append('<tr><td id="price1">' + totalAmount);
+
+    arrayAllOrders.push(totalAmount);
+    if (toppings==""){
+        $(".toppings").append('<tr><td id="toppings">' + "-");
+    }
+    if (toppings != "") {
+        $(".toppings").append('<tr><td id="toppings">' + toppings);
+        $(".name").text(name);
+    }
 }
+//Delivery section
+function orderDelivery(){
+    $("#delivery").show();
+    
+    var address=$("input#address").val();
+    var phone=$("input#phone").val();
+
+    $(".location").text(location);
+    $(".phone").text(phone);
+    $("#location").hide();
+}
+//<td class="flavor"></td>
+{/* <td class="size"></td>
+<td class="crust"></td>
+<td class="number"></td>
+<td class="toppings"></td>
+<td class="price1" td> */}
