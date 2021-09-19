@@ -64,7 +64,7 @@ function orderPizza(){
     //function to deactivate button to avoid multiple orders
     $('placeholder').prop('disabled',true);
     //Total price function
-    $("#orderdetails").show();
+    $("#orderfeedback").show();
 
     var price=(flavorPrice+crustPrice+toppingPrice);
     var totalAmount=parseInt(price*amount);
@@ -85,7 +85,7 @@ function orderPizza(){
         $(".name").text(name);
     }
 }
-//Delivery section
+//Function for delivery
 function orderDelivery(){
     $("#delivery").show();
     
@@ -96,9 +96,65 @@ function orderDelivery(){
     $(".phone").text(phone);
     $("#location").hide();
 }
-//<td class="flavor"></td>
-{/* <td class="size"></td>
-<td class="crust"></td>
-<td class="number"></td>
-<td class="toppings"></td>
-<td class="price1" td> */}
+//User Interface Logic
+$(document).ready(function () {
+    $("#orderdetails").submit(function (event) {
+        event.preventDefault();
+        orderPizza();
+    });
+    $("#deliveryAddress").submit(function (event) {
+        event.preventDefault();
+        orderDelivery();
+    });
+});
+var arrayAllOrders=[];
+function deliveryOptions() {
+    $("#pnd").show();
+    $("#pickUpDelivery").show();
+    $("#finalDetails").hide();
+
+    document.getElementById("orderdetails").reset();
+
+    $('#placeorder').prop('disabled', false);
+
+    var checkoutAmount = 0;
+    arrayAllOrders.forEach(function (index) {
+        checkoutAmount = checkoutAmount + index;
+    });
+
+    $(".amountPickUp").text(checkoutAmount);
+
+    var checkoutAmountTotal = checkoutAmount + 200;
+
+    $(".deliveryTotal").text(checkoutAmountTotal);
+}
+function pickUpOptions() {
+    $("#pickUp").show();
+    $("#pnd").hide();
+    
+}
+
+function delivery() {
+    $("#location").show();
+    $("#pnd").hide();
+}
+
+function deliveryConfirm() {
+    $("#delivery").show();
+    $("#location").hide();
+}
+function reloadPage() {  
+    location.reload();
+}
+function clearTextarea() {
+    $("#messageForm").reset();
+}
+function anotherOrder() {
+    $('#placeorder').prop('disabled', false); 
+    $("input[type='checkbox']").prop({ 
+        disabled: false
+    });
+    $("input[type='checkbox']").prop({
+        checked: false
+    });
+} 
