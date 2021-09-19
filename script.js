@@ -44,5 +44,17 @@ function orderPizza(){
     }
 
     var toppingCheckbox=$('input[name="toppings"]:checked').length;
-    
+    var toppingPrice;
+    if (size==="Small"){
+        toppingPrice=toppingCheckbox*50;
+    }
+    else if (size==="Regular"){
+        toppingPrice=toppingCheckbox*100;
+    }
+    else if (size==="Large"){
+        toppingPrice=toppingCheckbox*200;
+    }
+    else if (size==="Mega"){
+        toppingPrice=toppingCheckbox*300;
+    }
 }
