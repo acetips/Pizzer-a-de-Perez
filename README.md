@@ -17,9 +17,9 @@ This project entails website for Pizzería de Pérez, a pizza restaurant, throug
 | :------------- | :----------: | -----------: |
 |  Enter your name  |   Emelda Perez |     |
 | Select flavor  | Cheese |   |
-| Choose pizza size  |     |     |
+| Choose pizza size  |  Small   |     |
 |Choose pizza crust | Crispy |   |
-|Choose toppings|   |  |
+|Choose toppings| Extra Cheese  |  |
 | Place order|     |Pizza price displayed on the table.|
 
 ## Support and contact details
