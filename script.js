@@ -63,4 +63,8 @@ function orderPizza(){
     });
     //function to deactivate button to avoid multiple orders
     $('placeholder').prop('disabled',true);
+    //Total price function
+    //$("#your")
+    var price=(flavorPrice+crustPrice+toppingPrice);
+    var totalAmount=parseInt(price*amount);
 }
