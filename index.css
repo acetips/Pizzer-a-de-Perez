@@ -12,6 +12,9 @@ html{
 body{
     overflow-x: hidden;
 }
+a:hover{
+    color: yellow;
+}
 #header{
     width: 100%;
     position: fixed;
@@ -21,4 +24,23 @@ body{
     justify-content: space-between;
     padding: 2rem 4rem;
     z-index: 1000;
+}
+.logo{
+    height: 5rem;
+}
+nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+nav li{
+    margin-right: 4rem;
+}
+nav li a{
+    color: white;
+    font-size: 2rem;
+}
+#home{
+    background: linear-gradient(0deg, darkgrey, black);
+    min-height: 100vh;
 }
