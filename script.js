@@ -5,6 +5,7 @@ function orderPizza(){
     var flavor=$("#flavor").val();
     var size=$("size").val();
     var amount=$("#amount").val();
+    var crust=$("#crust").val();
     var toppings=[];
     
     $.each($('input[name="toppings"]:checked'),
@@ -29,5 +30,16 @@ function orderPizza(){
     }
 
     var crustPrice;
-    
+    if (crust==="Crispy"){
+        crustPrice===50;
+    }
+    else if (crust==="Cheese-Stuffed"){
+        crustPrice=100;
+    }
+    else if (crust==="Glutten-free"){
+        crustPrice=150;
+    }
+    else if (crust==="Flatbread"){
+        crustPrice=200;
+    }
 }
