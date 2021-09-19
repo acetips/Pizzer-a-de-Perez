@@ -90,7 +90,7 @@ function orderPizza(){
 
     if(document.getElementById("d").checked == true && document.getElementById("p").checked == false){
         prompt("Where are you located?");
-        alert("Total amount payable on delivery is " + totalOnDelivery);
+        alert("Your order will be delivered to your location in 30 minutes. Total amount payable on delivery is Ksh." + totalOnDelivery);
     } else if (document.getElementById("d").checked == false && document.getElementById("p").checked == true){
         alert("Total amount payable on pick up is " + totalAmount);
     }
